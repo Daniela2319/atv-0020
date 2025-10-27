@@ -1,0 +1,170 @@
+/* Reset básico */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family:'Microsoft PhagsPa'
+}
+
+/* Estilo geral do header */
+header {
+    background-color: #4A90E2;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Navbar container */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navegação à esquerda */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+    .nav-links li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
+        .nav-links li a:hover {
+            color: #FFD700;
+        }
+
+/* Logo à direita */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+    .logo span {
+        color: #FFD700;
+        text-decoration: none;
+    }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        align-self: flex-end;
+    }
+}
+/*Botão*/
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+/* Estilo principal do botão */
+.btn-primary {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+}
+
+    /* Efeito hover */
+    .btn-primary:hover {
+        background-color: #357ABD;
+        transform: scale(1.03);
+    }
+
+    /* Efeito de clique */
+    .btn-primary:active {
+        background-color: #2C5FA0;
+        transform: scale(0.98);
+    }
+
+
+/* Conteúdo principal */
+main {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    max-width: 960px;
+    margin: 20px auto;
+    
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+    form label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    form input {
+        width: 400px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+        
+    }
+
+        form input:focus {
+            border-color: #4A90E2;
+            outline: none;
+        }
+
+    form button {
+        padding: 12px;
+        background-color: #4A90E2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        form button:hover {
+            background-color: #357ABD;
+        }
+
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}

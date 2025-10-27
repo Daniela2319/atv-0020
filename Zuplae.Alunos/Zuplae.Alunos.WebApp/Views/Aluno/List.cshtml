@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Zuplae.Alunos.WebApp.Models.Aluno>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+
+<h2>Pessoas Cadastradas</h2>
+
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>DataNascimento</th>
+        <th>Email</th>
+        <th>Disciplina</th>
+    </tr>
+    @foreach (var pessoa in Model)
+    {
+        <tr>
+            <td>@pessoa.Nome</td>
+            <td>@pessoa.Idade</td>
+            <td>@pessoa.DataNascimento</td>
+            <td>@pessoa.Email</td>
+            <td>@pessoa.Disciplina</td>
+        </tr>
+    }
+</table>
+
